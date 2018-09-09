@@ -1,0 +1,10 @@
+==========================Exercise Checking Report==========================
+Exercise No...........: 2
+First Student Details.: 321373136 - Mariya Stashevski
+Second Student Details: 317612950 - Gregory Mozias
+Delivery Date.........: 21 - August- 2018
+Delivered In Delay....: yes
+Delay Reason..........: 
+Visual Studio Version.: 2015
+Comments..............: None
+========================End Exercise Checking Report========================

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43F34377-17CE-4B32-93A0-B32F0BD8F62C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>C18_Ex03_Gregory_317612950_Mariya_321373136</RootNamespace>
+    <AssemblyName>C18 Ex03 Gregory 317612950 Mariya 321373136</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\FBApi\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>..\FBApi\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationFactory\ApplicationSettings.cs" />
+    <Compile Include="ApplicationFactory\ApplicationFactory.cs" />
+    <Compile Include="ApplicationFactory\CommonPlacesApplication.cs" />
+    <Compile Include="ApplicationFactory\ApplicationBase.cs" />
+    <Compile Include="ApplicationFactory\Grid.cs" />
+    <Compile Include="ApplicationFactory\WidgetCommands\ICommand.cs" />
+    <Compile Include="ApplicationFactory\PlacesStrategy\CommonPlacesStrategy.cs" />
+    <Compile Include="ApplicationFactory\PlacesStrategy\GroupByCategoryStrategy.cs" />
+    <Compile Include="ApplicationFactory\PlacesStrategy\IUserPlacesStrategy.cs" />
+    <Compile Include="ApplicationFactory\WidgetControls\Place.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\Place.Designer.cs">
+      <DependentUpon>Place.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\PlaceCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\PlaceCategory.Designer.cs">
+      <DependentUpon>PlaceCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetCommands\WidgetCommand.cs" />
+    <Compile Include="ApplicationFactory\Widgets.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="ApplicationFactory\WidgetControls\FriendsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\UserPlaces.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\Widget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\Widget.Designer.cs">
+      <DependentUpon>Widget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\FriendsListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\FriendsListItem.Designer.cs">
+      <DependentUpon>FriendsListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookModule.cs" />
+    <Compile Include="ApplicationFactory\WidgetControls\Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationFactory\WidgetControls\Header.Designer.cs">
+      <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrlRequest.cs" />
+    <Compile Include="MainApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApplicationForm.Designer.cs">
+      <DependentUpon>MainApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsApi\INews.cs" />
+    <Compile Include="NewsApi\INewsArticle.cs" />
+    <Compile Include="NewsApi\NewsApi.cs" />
+    <Compile Include="NewsApi\NewsApiFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singelton.cs" />
+    <EmbeddedResource Include="ApplicationFactory\WidgetControls\Place.resx">
+      <DependentUpon>Place.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationFactory\WidgetControls\PlaceCategory.resx">
+      <DependentUpon>PlaceCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationFactory\WidgetControls\Widget.resx">
+      <DependentUpon>Widget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationFactory\WidgetControls\FriendsListItem.resx">
+      <DependentUpon>FriendsListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationFactory\WidgetControls\Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainApplicationForm.resx">
+      <DependentUpon>MainApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
