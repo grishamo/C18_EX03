@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace C18_Ex03_Gregory_317612950_Mariya_321373136
 {
-    class GroupByCategoryStrategy : IUserPlacesStrategy
+    class UserCategoriesStrategy : IUserPlacesStrategy
     {
         private List<PlaceCategory> m_allCategories = new List<PlaceCategory>();
 

@@ -41,7 +41,7 @@ namespace C18_Ex03_Gregory_317612950_Mariya_321373136
         {
             Widgets = new Widgets();
 
-            Widget userPlaces = new UserPlaces(userPlacesStrategy: new GroupByCategoryStrategy()); 
+            Widget userPlaces = new UserPlaces(userPlacesStrategy: new UserCategoriesStrategy()); 
             userPlaces.Dock = DockStyle.Fill;
 
             Widget commonPlaces = new UserPlaces(userPlacesStrategy: new CommonPlacesStrategy());

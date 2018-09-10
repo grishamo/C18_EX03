@@ -59,7 +59,7 @@
     <Compile Include="ApplicationFactory\Grid.cs" />
     <Compile Include="ApplicationFactory\WidgetCommands\ICommand.cs" />
     <Compile Include="ApplicationFactory\PlacesStrategy\CommonPlacesStrategy.cs" />
-    <Compile Include="ApplicationFactory\PlacesStrategy\GroupByCategoryStrategy.cs" />
+    <Compile Include="ApplicationFactory\PlacesStrategy\UserCategoriesStrategy.cs" />
     <Compile Include="ApplicationFactory\PlacesStrategy\IUserPlacesStrategy.cs" />
     <Compile Include="ApplicationFactory\WidgetControls\Place.cs">
       <SubType>UserControl</SubType>
