@@ -25,10 +25,5 @@ namespace C18_Ex03_Gregory_317612950_Mariya_321373136
         {
             m_NewUser = args[0];
         }
-
-        public void UnExecute()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
