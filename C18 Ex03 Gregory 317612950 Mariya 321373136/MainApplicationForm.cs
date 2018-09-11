@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.ComponentModel;
-using FacebookWrapper;
-using System.Collections.Generic;
 
 namespace C18_Ex03_Gregory_317612950_Mariya_321373136
 {
